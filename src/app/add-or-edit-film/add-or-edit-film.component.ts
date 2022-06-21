@@ -23,6 +23,7 @@ export class AddOrEditFilmComponent implements OnInit {
   });
 
   sendInfoFilm() {
+    // We send the given string of the form as a Dictionary (Object) to the parent component
     this.rate.emit(this.filmForm.value);
   }
 

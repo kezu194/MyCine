@@ -12,6 +12,7 @@ export class AppComponent {
   films : Film[] = [];
 
   onRate(event: any) {
+    // We push in our list of Film the event which is the new created film
     this.films.push(event);
   }
 

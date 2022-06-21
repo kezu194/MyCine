@@ -7,9 +7,9 @@
         <th>Note /10</th>
     </tr>
     <tr *ngFor="let film of films let index = index;">
-        <td id="final">{{film.titre}}</td>
-        <td id="final">{{film.description}}</td>
-        <td id="final">{{film.note}}</td>
+        <td>{{film.titre}}</td>
+        <td>{{film.description}}</td>
+        <td>{{film.note}}</td>
         
         <input id="edit" type="text" value="{{film.titre}}">
         <input id="edit" type="text" value="{{film.description}}">
