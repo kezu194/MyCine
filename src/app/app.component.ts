@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input, EventEmitter } from '@angular/core';
+import { Film } from './film.model';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'MyCine';
+
+  films : Film[] = [];
+
+  onRate(event: any) {
+    this.films.push(event);
+  }
+
+
+
+
 }
+
+

@@ -1,0 +1,21 @@
+
+
+<table id="table">
+    <tr>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Note /10</th>
+    </tr>
+    <tr *ngFor="let film of films let index = index;">
+        <td id="final">{{film.titre}}</td>
+        <td id="final">{{film.description}}</td>
+        <td id="final">{{film.note}}</td>
+        
+        <input id="edit" type="text" value="{{film.titre}}">
+        <input id="edit" type="text" value="{{film.description}}">
+        <input id="edit" type="text" value="{{film.note}}">
+
+        <input type="submit" (click)="SupprimerFilm(index)" value="Supprimer">
+        <input type="submit" (click)="EditerFilm(index)" value="Editer">
+    </tr>
+</table>

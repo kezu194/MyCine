@@ -1,0 +1,20 @@
+
+<h1>Editeur de Film</h1>
+<form [formGroup]="filmForm" >
+    <label>
+        Titre du Film: 
+        <input type="text" formControlName="titre">
+    </label>
+    <br>
+    <label>
+        Description: 
+        <input id="description" type="text" formControlName="description">
+    </label>
+    <br>
+    <label>
+        Note:
+        <input id="note" type="text" [maxLength]=2 formControlName="note">/10
+    </label>
+    <br>
+    <input type="submit" (click)="sendInfoFilm()" value="Ajouter !">
+</form>

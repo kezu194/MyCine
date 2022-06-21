@@ -1,0 +1,28 @@
+h1{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align:center ;
+}
+
+input#description{
+    font-size:14pt;
+    height:200px;
+}
+
+input{
+    font-size: large;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+form{
+    text-align: center;
+}
+
+#note{
+    width: 25px;
+}

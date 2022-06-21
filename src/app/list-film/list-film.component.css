@@ -1,0 +1,24 @@
+table
+{
+
+    border:2px solid black;
+}
+td
+{
+    border: 1px solid black;
+    width: 200px;
+    text-align: center;
+}
+
+#note{
+    width:60px;
+}
+
+#description{
+    width: 200px;
+    height: 50px;
+}
+
+#edit{
+    display: none;
+}
