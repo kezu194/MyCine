@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AddOrEditFilmComponent } from './add-or-edit-film/add-or-edit-film.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ListFilmComponent } from './list-film/list-film.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ListFilmComponent } from './list-film/list-film.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

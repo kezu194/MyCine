@@ -27,4 +27,6 @@ export class AddOrEditFilmComponent implements OnInit {
     this.rate.emit(this.filmForm.value);
   }
 
+  
+
 }
