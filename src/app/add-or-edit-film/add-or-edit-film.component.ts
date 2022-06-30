@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup} from '@angular/forms';
 import { Film } from '../film.model';
 
@@ -10,10 +10,11 @@ import { Film } from '../film.model';
 export class AddOrEditFilmComponent implements OnInit {
 
   @Output() rate= new EventEmitter();
+  @Input() film_to_edit! : Film;
 
-  constructor() { }
-  ngOnInit(): void {
-  }
+  constructor() {}
+  ngOnInit(): void {}
+
   bouton= new FormControl("Ajouter Film !")
 
   filmForm = new FormGroup({
@@ -26,7 +27,5 @@ export class AddOrEditFilmComponent implements OnInit {
     // We send the given string of the form as a Dictionary (Object) to the parent component
     this.rate.emit(this.filmForm.value);
   }
-
-  
 
 }

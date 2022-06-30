@@ -12,33 +12,26 @@ export class ListFilmComponent implements OnInit {
 
   @Input() films!: Film[];
   @Output() edit = new EventEmitter();
-  private _filmListUrl = 'http://localhost:3000/film';
 
 
   constructor(private filmService: FilmService) { }
 
   ngOnInit(): void {
-    this.RefreshFilms()
   }
 
-  RefreshFilms(){
-    this.filmService.GetFilm()
-      .subscribe(data => {
-        console.log(data);
-        this.films=data;
-      })
-  }
-
-  EditerFilm(index : any){
+  EditerFilm(index : number){
     // Pour l'Edition, on va repasser par le component add-or-edit-film avec un output et afficher les valeurs actuels du film selectionné
-    this.edit.emit(this.films[index])
+    this.edit.emit(this.films[index]);
   }
 
-  SupprimerFilm(index: any): void{
+  SupprimerFilm(index: number): void{
     // On récupère l'index de la ligne et on supprime dans le tableau l'element en question
     // this.films.splice(index, 1);
-    console.log(index);
-    this.filmService.DeleteFilm(this.films[index].id).subscribe();
+    
+    this.filmService.deleteFilm(this.films[index].id).subscribe(deletedFilm=>{
+      this.films = this.films.filter(film => this.films[index].id != film.id);
+    }); 
+    //window.location.reload();
 
   }
 

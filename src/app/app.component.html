@@ -1,4 +1,4 @@
 
-<app-add-or-edit-film (rate)="onRate($event)"></app-add-or-edit-film>
+<app-add-or-edit-film (rate)="onRate($event)" [film_to_edit]="film_to_edit"></app-add-or-edit-film>
 
-<app-list-film [films]="films"></app-list-film>
+<app-list-film [films]="films" (edit)="onEdit($event)"></app-list-film>
